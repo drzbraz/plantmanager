@@ -1,34 +1,34 @@
+import { Feather } from '@expo/vector-icons'
 import React from 'react'
 import {
-    Dimensions, Image,
+    Dimensions,
     SafeAreaView,
     StyleSheet,
     Text,
-    TouchableOpacity
+    TouchableOpacity,
 } from 'react-native'
-import wateringImg from '../assets/watering.png'
 import colors from '../styles/colors'
 export function Welcome() {
     return (
         <SafeAreaView style={style.container}>
-            <Text style={style.title}>
+            {/* <Text style={style.title}>
                 Gerencie {'\n'}
                 suas plantas {'\n'}
                 de forma fácil
-            </Text>
-            <Image
+            </Text> */}
+            {/* <Image
                 source={wateringImg}
                 style={style.image}
-                resizeMode="contain"
-            />
-            <Text style={style.subtitle}>
+                resizeMode='contain'
+            /> */}
+            {/* <Text style={style.subtitle}>
                 Não esqueça mais de regar suas plantas. Nós cuidamos de lembrar
                 você sempre que precisar.
-            </Text>
+            </Text> */}
             <TouchableOpacity style={style.button} activeOpacity={0.7}>
                 <Text style={style.buttonText}>
-                    >
-                    </Text>
+                    <Feather name='chevron-right' style={style.buttonIcon} />
+                </Text>
             </TouchableOpacity>
         </SafeAreaView>
     )
@@ -66,7 +66,11 @@ const style = StyleSheet.create({
         color: colors.white,
         fontSize: 24,
     },
+    buttonIcon: {
+        fontSize: 32,
+        color: colors.white,
+    },
     image: {
-        height: Dimensions.get('window').width*0.7,
+        height: Dimensions.get('window').width * 0.7,
     },
 })
