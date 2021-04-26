@@ -5,7 +5,7 @@ import {
 } from '@expo-google-fonts/jost'
 import AppLoading from 'expo-app-loading'
 import React from 'react'
-import { Welcome } from './src/pages/Welcome'
+import { Confirmation } from './src/pages/Confirmation'
 export default function App() {
     const [fontsLoaded] = useFonts({
         Jost_400Regular,
@@ -15,5 +15,5 @@ export default function App() {
     if (!fontsLoaded) {
         return <AppLoading />
     }
-    return <Welcome />
+    return <Confirmation />
 }
